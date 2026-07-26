@@ -104,7 +104,7 @@
         "padstack": "warning",
         "pth_inside_courtyard": "error",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
+        "silk_edge_clearance": "ignore",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
@@ -130,8 +130,8 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
-        "min_connection": 0.0,
+        "min_clearance": 0.2,
+        "min_connection": 0.1,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
@@ -195,7 +195,8 @@
       ],
       "track_widths": [
         0.0,
-        4.0
+        0.6,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -522,7 +523,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../pcb",
       "specctra_dsn": "",
       "vrml": ""
     },
@@ -634,6 +635,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -646,13 +655,13 @@
         "uuid": "1bc1b16d-52e3-4b86-a269-30f6b5e15910"
       }
     ],
-    "used_designators": "H1-4,SW1-6,D1-4,U1-2",
+    "used_designators": "R1-6,C1-2,D1-4,SW1-6,H1-4,U1-2",
     "variants": []
   },
   "sheets": [
     [
       "1bc1b16d-52e3-4b86-a269-30f6b5e15910",
-      "Tally"
+      "esp32-tallighty"
     ]
   ],
   "text_variables": {},
